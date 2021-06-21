@@ -1,0 +1,31 @@
+CREATE TABLE [departamento] (
+    [CODEPTO] int NOT NULL primary key,
+    [DESCRIPCION] nvarchar(255)
+);
+
+CREATE TABLE [profesion] (
+    [DESCRIPCION] nvarchar(255),
+    [CODPROF] int NOT NULL primary key
+);
+
+CREATE TABLE [cliente] (
+    [CODEPTO] int,
+    [CARNET] int NOT NULL primary key,
+    [NOMBRES] nvarchar(255),
+    [CODPROF] int,
+CONSTRAINT fk_departamento FOREIGN KEY (CODEPTO) REFERENCES departamento (CODEPTO),
+CONSTRAINT fk_profesion FOREIGN KEY (CODPROF) REFERENCES profesion (CODPROF)
+);
+
+CREATE TABLE [cuenta] (
+    [CARNET] int NOT NULL,
+    [CUENTA] nvarchar(255) NOT NULL primary key,
+CONSTRAINT fk_cliente FOREIGN KEY (CARNET) REFERENCES cliente (CARNET)
+);
+
+CREATE TABLE [movimiento] (
+    [CUENTA] nvarchar(255) NOT NULL,
+    [DEPOSITO] float,
+    [SEMANA] float,
+CONSTRAINT fk_cuenta FOREIGN KEY (CUENTA) REFERENCES cuenta (CUENTA)
+);

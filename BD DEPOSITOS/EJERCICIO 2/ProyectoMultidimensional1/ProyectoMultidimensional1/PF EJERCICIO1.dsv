@@ -1,0 +1,159 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ca471a1b-08e4-47e3-a012-10b5a64074d5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>PF EJERCICIO1</ID>
+  <Name>PF EJERCICIO1</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>PF EJERCICIO1</DataSourceID>
+  <Schema>
+    <xs:schema id="PF_x0020_EJERCICIO1" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="PF_x0020_EJERCICIO1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="7272f4d4-8e15-4c4c-bddb-ff4c41283da8">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_cliente" msprop:design-time-name="94ab78a1-6484-4a8e-8f86-e5a34c0cb9a8" msprop:DbTableName="cliente" msprop:FriendlyName="cliente" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CODEPTO" msprop:design-time-name="92acb8ad-c4f2-441d-bcd0-ab8be1abc0c1" msprop:DbColumnName="CODEPTO" msprop:FriendlyName="CODEPTO" type="xs:int" minOccurs="0" />
+                  <xs:element name="CARNET" msprop:design-time-name="917045f3-719c-4343-8571-9afaf0a36eed" msprop:DbColumnName="CARNET" msprop:FriendlyName="CARNET" type="xs:int" />
+                  <xs:element name="NOMBRES" msprop:design-time-name="fb127db2-c7c5-45ce-bf15-5a786763da21" msprop:DbColumnName="NOMBRES" msprop:FriendlyName="NOMBRES" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CODPROF" msprop:design-time-name="ce6a1a09-a19c-47a9-85fb-f45859058db7" msprop:DbColumnName="CODPROF" msprop:FriendlyName="CODPROF" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_cuenta" msprop:design-time-name="849b9c51-1f76-4539-b5fa-25a4185ccad9" msprop:DbTableName="cuenta" msprop:FriendlyName="cuenta" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CARNET" msprop:design-time-name="8fe77e1c-2d46-46fa-b460-6bc678d93465" msprop:DbColumnName="CARNET" msprop:FriendlyName="CARNET" type="xs:int" />
+                  <xs:element name="CUENTA" msprop:design-time-name="5bce9476-1c5f-4b5c-b88b-1f496c2a4f52" msprop:DbColumnName="CUENTA" msprop:FriendlyName="CUENTA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_departamento" msprop:design-time-name="09b08308-ad5f-4c29-9485-4a0f4a849bf5" msprop:DbTableName="departamento" msprop:FriendlyName="departamento" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CODEPTO" msprop:design-time-name="3b88f175-a54d-4566-b4c1-39f1d0704e0f" msprop:DbColumnName="CODEPTO" msprop:FriendlyName="CODEPTO" type="xs:int" />
+                  <xs:element name="DESCRIPCION" msprop:design-time-name="aa7641e6-3d6b-45be-b32b-319f68e9de42" msprop:DbColumnName="DESCRIPCION" msprop:FriendlyName="DESCRIPCION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_movimiento" msprop:design-time-name="f3810ade-e631-43d6-866e-0ca74317e7a1" msprop:DbTableName="movimiento" msprop:FriendlyName="movimiento" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CUENTA" msprop:design-time-name="965a5bb7-17b5-4833-9429-473c0f09e543" msprop:DbColumnName="CUENTA" msprop:FriendlyName="CUENTA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEPOSITO" msprop:design-time-name="bf3c5e46-c80f-4b36-9dfb-fc378f0bbbdf" msprop:DbColumnName="DEPOSITO" msprop:FriendlyName="DEPOSITO" type="xs:double" minOccurs="0" />
+                  <xs:element name="SEMANA" msprop:design-time-name="0872e745-10b2-423a-84bb-51bb6872d590" msprop:DbColumnName="SEMANA" msprop:FriendlyName="SEMANA" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_profesion" msprop:design-time-name="93b788b2-70e6-4ac9-8d29-313b4e086a5c" msprop:DbTableName="profesion" msprop:FriendlyName="profesion" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DESCRIPCION" msprop:design-time-name="cb057f6d-56a7-4b15-9fde-439602f46f50" msprop:DbColumnName="DESCRIPCION" msprop:FriendlyName="DESCRIPCION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CODPROF" msprop:design-time-name="dd856ee4-a4be-418e-aa47-402f2c345d70" msprop:DbColumnName="CODPROF" msprop:FriendlyName="CODPROF" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_cliente" />
+          <xs:field xpath="CARNET" />
+        </xs:unique>
+        <xs:unique name="dbo_cuenta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_cuenta" />
+          <xs:field xpath="CUENTA" />
+        </xs:unique>
+        <xs:unique name="dbo_departamento_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_departamento" />
+          <xs:field xpath="CODEPTO" />
+        </xs:unique>
+        <xs:unique name="dbo_profesion_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_profesion" />
+          <xs:field xpath="CODPROF" />
+        </xs:unique>
+        <xs:keyref name="fk_cuenta" refer="dbo_cuenta_Constraint1">
+          <xs:selector xpath=".//dbo_movimiento" />
+          <xs:field xpath="CUENTA" />
+        </xs:keyref>
+        <xs:keyref name="fk_cliente" refer="Constraint1">
+          <xs:selector xpath=".//dbo_cuenta" />
+          <xs:field xpath="CARNET" />
+        </xs:keyref>
+        <xs:keyref name="fk_departamento" refer="dbo_departamento_Constraint1">
+          <xs:selector xpath=".//dbo_cliente" />
+          <xs:field xpath="CODEPTO" />
+        </xs:keyref>
+        <xs:keyref name="fk_profesion" refer="dbo_profesion_Constraint1">
+          <xs:selector xpath=".//dbo_cliente" />
+          <xs:field xpath="CODPROF" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <PF_x0020_EJERCICIO1 xmlns="" />
+  </Schema>
+</DataSourceView>

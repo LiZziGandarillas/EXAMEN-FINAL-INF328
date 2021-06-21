@@ -1,0 +1,133 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e4daee1a-382b-4501-a14d-f2992ec00bb5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>PF EJERCICIO1 1</ID>
+  <Name>PF EJERCICIO1 1</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="638f5341-5686-42fb-a5c0-4f5559988e86">
+      <ID>Cuenta</ID>
+      <Name>Cuenta</Name>
+      <DimensionID>Cuenta</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e4545377-0f9f-4ef6-9551-3828de179662">
+          <AttributeID>CUENTA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2aa7c0d9-fd66-4a9a-b6e7-d4aacceb50fb">
+          <AttributeID>CARNET</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="af0a0cd6-4133-49d7-b12d-bf2eea9f03a7">
+      <ID>Movimiento</ID>
+      <Name>Movimiento</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="a6eca1e5-2b6b-41f3-baea-ada938a7f301">
+          <ID>DEPOSITO</ID>
+          <Name>DEPOSITO</Name>
+          <Source dwd:design-time-name="d0c2e563-bfa1-4c13-9381-55cb018f4c3b">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8dc011e4-2b4d-4536-89b6-31ef367be41f">
+              <TableID>dbo_movimiento</TableID>
+              <ColumnID>DEPOSITO</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8a01c201-843e-4e92-afb5-d1c5be36aac2">
+          <ID>SEMANA</ID>
+          <Name>SEMANA</Name>
+          <Source dwd:design-time-name="fee44c7b-02be-4dab-98ed-dfc0e4c17668">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="668ee012-19bb-44c4-98c9-91a536d4b4b4">
+              <TableID>dbo_movimiento</TableID>
+              <ColumnID>SEMANA</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bba91b40-ebbb-4dc8-95a0-a13e37234bcd">
+          <ID>Recuento Movimiento</ID>
+          <Name>Recuento Movimiento</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="16e80017-1374-4ee9-a147-926ebab36e88">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="040a0672-9cd1-491d-a5d0-ad4edfb0e5b8">
+              <TableID>dbo_movimiento</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="76f800ef-9a72-44e8-bec6-a2579cef3fbb">
+          <CubeDimensionID>Cuenta</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="49267dc7-8e50-4dd0-ad5e-2809c38a414b">
+              <AttributeID>CUENTA</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5b88d118-ecb0-4323-a831-f4fff606b970">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5f569436-2cad-4de1-8afe-73e52b0e1ddd">
+                    <TableID>dbo_movimiento</TableID>
+                    <ColumnID>CUENTA</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="3544c8fa-48da-463d-a861-e84a62113f4f">
+    <DataSourceViewID>PF EJERCICIO1</DataSourceViewID>
+  </Source>
+</Cube>
