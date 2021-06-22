@@ -1,0 +1,196 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="40fe64c6-896c-4a51-b7d3-0c9ec8f626d5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>PF EJERCICIO1 2</ID>
+  <Name>PF EJERCICIO1 2</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="e06c424f-9320-4d06-8301-54af6d7a36da">
+      <ID>Clientes</ID>
+      <Name>Clientes</Name>
+      <DimensionID>Clientes</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="17531eef-02c5-4069-b5ea-6ba8c849a2d6">
+          <AttributeID>Codcli</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="0f7fe1d6-e9c3-4d4a-989e-879e7b2740cc">
+      <ID>Almacenes</ID>
+      <Name>Almacenes</Name>
+      <DimensionID>Almacenes</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="752e961e-2f6a-4277-a3ea-c91c083ecb2d">
+          <AttributeID>Codalm</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="83cadfd8-6263-4b11-b927-7718447809ee">
+      <ID>Vendedores</ID>
+      <Name>Vendedores</Name>
+      <DimensionID>Vendedores</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="23d656d3-4651-4c8a-9e4a-d30f4923d38e">
+          <AttributeID>Codven</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="46e41cf5-5bbc-4b24-b28d-498fca42b342">
+      <ID>Tiposdoc</ID>
+      <Name>Tiposdoc</Name>
+      <DimensionID>Tiposdoc</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9b41bbaa-e633-415b-b32d-d978839b2f90">
+          <AttributeID>Tipdoc</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="22c2bbf6-eae4-4959-949c-732ca1d30880">
+      <ID>Maemov</ID>
+      <Name>Maemov</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e686da74-606e-47b3-b856-d9429d733dd1">
+          <ID>Recuento Maemov</ID>
+          <Name>Recuento Maemov</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="b130861e-43ca-4611-96a6-82473cc3f0ff">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="2aab14dc-be1f-4aa5-ba0b-1a70a7a3d246">
+              <TableID>dbo_maemov</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="953a8db0-58b5-49b3-b0db-580557a0a4f7">
+          <CubeDimensionID>Clientes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f37fde01-9080-4f60-ba51-1c543a8f0a1a">
+              <AttributeID>Codcli</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8885d8f6-db1d-475a-a75f-f6465c474277">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ff951806-f4ae-40ae-8c94-54acfbe610c5">
+                    <TableID>dbo_maemov</TableID>
+                    <ColumnID>codcli</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="68a3e10f-1470-4ea0-aa71-e720008f495e">
+          <CubeDimensionID>Almacenes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="afd6a202-90f9-4969-8dda-76cea7cc5da4">
+              <AttributeID>Codalm</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cbf24e6a-3016-4d54-9cde-9532f913d128">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f8ecd19a-c410-4c4b-a8c5-b78fd7f58c7c">
+                    <TableID>dbo_maemov</TableID>
+                    <ColumnID>codalm</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e02eb86f-c967-4ebf-8caa-36c7ad7b8568">
+          <CubeDimensionID>Vendedores</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a58d7c75-a54c-49b8-a022-c72d72d20abc">
+              <AttributeID>Codven</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3f87daf5-9bd9-43a9-81cd-8a279ee52d2b">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6beb6a86-c8b5-4919-b7db-10bfa54322bf">
+                    <TableID>dbo_maemov</TableID>
+                    <ColumnID>codven</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4e3f79cb-ac97-4dd5-ab8f-16295bc7eaa3">
+          <CubeDimensionID>Tiposdoc</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cb9c9e76-9279-4341-9757-a2f5d9671b9c">
+              <AttributeID>Tipdoc</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a14d18fc-e445-4421-96d5-0ec1919ea572">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9d287639-472d-414d-afca-c7bfc3c4fc34">
+                    <TableID>dbo_maemov</TableID>
+                    <ColumnID>tipdoc</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="ecedb8c5-14b8-47ec-af81-9bc8fe4e02d4">
+    <DataSourceViewID>PF EJERCICIO1 2</DataSourceViewID>
+  </Source>
+</Cube>

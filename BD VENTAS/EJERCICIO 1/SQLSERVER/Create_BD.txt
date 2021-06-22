@@ -1,0 +1,77 @@
+CREATE TABLE [unidades] (
+    [univen] nvarchar(255) NOT NULL primary key,
+    [descripcion] nvarchar(255),
+    [unipcaja] int
+);
+
+CREATE TABLE [productos] (
+    [univen] nvarchar(255),
+    [descripcion] nvarchar(255),
+    [codprod] int NOT NULL primary key,
+CONSTRAINT fk_unidades FOREIGN KEY (univen) REFERENCES unidades (univen)
+);
+
+CREATE TABLE [precios] (
+    [codprod] int,
+    [fechavig] date,
+    [pu] float,
+CONSTRAINT fk_productos FOREIGN KEY (codprod) REFERENCES productos (codprod) 
+);
+
+CREATE TABLE [vendedores] (
+    [codven] int NOT NULL primary key,
+    [nombres] nvarchar(255),
+    [carnet] int,
+    [telefono] int
+);
+
+CREATE TABLE [facturador] (
+    [codven] int,
+    [fecha] date,
+    [desde] int,
+    [hasta] int,
+CONSTRAINT fk_vendedores FOREIGN KEY (codven) REFERENCES vendedores (codven) 
+);
+
+
+CREATE TABLE [clientes] (
+    [nombres] nvarchar(255),
+    [telefono] int,
+    [codcli] int NOT NULL primary key,
+    [cinit] nvarchar(255)
+);
+
+CREATE TABLE [almacenes] (
+    [codalm] int NOT NULL primary key,
+    [desalm] nvarchar(255)
+);
+
+CREATE TABLE [tiposdoc] (
+    [tipdoc] nvarchar(255) NOT NULL primary key,
+    [abreviacion] nvarchar(255),
+    [desripcion] nvarchar(255)
+);
+
+CREATE TABLE [maemov] (
+    [tipdoc] nvarchar(255),
+    [nrodoc] int NOT NULL primary key,
+    [fecha] date,
+    [codven] int, 
+    [codalm] int,
+    [codcli] int,
+FOREIGN KEY (codven) REFERENCES vendedores ,
+FOREIGN KEY (codcli) REFERENCES clientes ,
+FOREIGN KEY (codalm) REFERENCES almacenes ,
+FOREIGN KEY (tipdoc) REFERENCES tiposdoc 
+);
+
+CREATE TABLE [detmov] (
+    [nrodoc] int,
+    [fecha] date,
+    [correlativo] int,
+    [codprod] int,
+    [cantidad] int,
+    [pu] float,
+FOREIGN KEY (nrodoc) REFERENCES maemov,
+FOREIGN KEY (codprod) REFERENCES productos
+);
